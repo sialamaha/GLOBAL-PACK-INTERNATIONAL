@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>iSTUDIO - Interior Design Website Template Free</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+     <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white">
+                <a href="index.html" class="logo d-flex align-items-center me-auto">
+                    <img src="img/logogpi.PNG" alt="Logo" style="height:70px;">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                        <a href="about.html" class="nav-item nav-link">À propos</a>
+                        <a href="produit.html" class="nav-item nav-link">Produits</a>
+
+                        <a href="certification.html" class="nav-item nav-link">Certifications</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+
+
+    <!-- Hero Start -->
+    <!-- <div class="container-fluid pb-5 bg-primary hero-header">
+        <div class="container py-5">
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-1 mb-0 animated slideInLeft">Projects</h1>
+                </div>
+                <div class="col-lg-6 animated slideInRight">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-end mb-0">
+                            <li class="breadcrumb-item"><a class="text-primary" href="#!">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-primary" href="#!">Pages</a></li>
+                            <li class="breadcrumb-item text-secondary active" aria-current="page">Projects</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Hero End -->
+
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .certification-header {
+            background: linear-gradient(135deg, #26b8bf 0%, #0357a9 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .certification-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="0,0 1000,50 1000,100 0,100"/></svg>');
+            background-size: cover;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .achievement-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #0257a8;
+            margin-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #26b8bf 0%, #0357a9 100%);
+            border-radius: 2px;
+        }
+        
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .achievement-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #0257a8;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        .achievement-card i {
+            font-size: 3rem;
+            color: #0257a8;
+            margin-bottom: 20px;
+        }
+        
+        .achievement-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #0257a8;
+        }
+        
+        .process-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: #0257a8;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .commitments-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .commitment-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .commitment-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2ab2b8;
+        }
+        
+        .commitment-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #0257a8;
+            display: flex;
+            align-items: center;
+        }
+        
+        .commitment-card h3 i {
+            margin-right: 10px;
+            color: #0257a8;
+        }
+        
+        .commitment-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .commitment-card li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e0e0e0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .commitment-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2ab2b8;
+            font-weight: bold;
+        }
+        
+        .conclusion-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .conclusion-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .conclusion-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .achievement-grid, .commitment-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <!-- En-tête de la certification -->
+    <header class="certification-header">
+        <div class="container">
+            <span class="badge">Certification Obtenue</span>
+            <h1>Certification GRS</h1>
+            <p class="subtitle">Global Pack International devient la première entreprise tunisienne certifiée GRS pour la fabrication de sacs d'emballage plastique</p>
+        </div>
+    </header>
+
+    <!-- Section Réalisation -->
+    <section class="achievement-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Une Réalisation Exceptionnelle</h2>
+                <p>Notre engagement pour l'excellence environnementale récompensé</p>
+            </div>
+            
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Première en Tunisie</h3>
+                    <p>Première entreprise tunisienne à obtenir la certification GRS pour les sacs d'emballage plastique</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Engagement Environnemental</h3>
+                    <p>Validation de nos efforts en matière de gestion environnementale et de qualité</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Excellence Opérationnelle</h3>
+                    <p>Étape clé dans notre engagement continu vers l'excellence opérationnelle et la durabilité</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Processus -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notre Processus de Certification</h2>
+                <p>Un cheminement rigoureux accompagné par des experts</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Accompagnement Expert</h3>
+                    <p>Guidés par ECOCERT, bureau de certification international reconnu</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Formation des Équipes</h3>
+                    <p>Sensibilisation et formation aux meilleures pratiques environnementales</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Contrôles Rigoureux</h3>
+                    <p>Mise en place d'indicateurs de performance et contrôles opérationnels</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Amélioration Continue</h3>
+                    <p>Visites de contrôle régulières pour assurer l'amélioration continue</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Engagements -->
+    <section class="commitments-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Engagements Concrets</h2>
+                <p>La certification GRS traduit notre engagement dans des actions mesurables</p>
+            </div>
+            
+            <div class="commitment-cards">
+                <div class="commitment-card">
+                    <h3><i class="fas fa-earth-americas"></i> Responsabilité Environnementale</h3>
+                    <ul>
+                        <li>Production de produits plus durables</li>
+                        <li>Gestion transparente des ressources</li>
+                        <li>Réduction significative des déchets</li>
+                        <li>Minimisation de l'impact environnemental</li>
+                    </ul>
+                </div>
+                
+                <div class="commitment-card">
+                    <h3><i class="fas fa-industry"></i> Excellence Industrielle</h3>
+                    <ul>
+                        <li>Amélioration continue des processus de production</li>
+                        <li>Livraison ponctuelle de produits conformes</li>
+                        <li>Réponse optimale aux attentes de nos clients</li>
+                        <li>Produits de qualité supérieure certifiée</li>
+                    </ul>
+                </div>
+                
+                <div class="commitment-card">
+                    <h3><i class="fas fa-handshake"></i> Respect des Parties Prenantes</h3>
+                    <ul>
+                        <li>Engagement RSE vérifié et transparent</li>
+                        <li>Management conforme à notre politique environnementale</li>
+                        <li>Relation de confiance avec clients et partenaires</li>
+                        <li>Valorisation de l'ensemble des acteurs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Conclusion -->
+    <section class="conclusion-section">
+        <div class="container">
+            <h2>Notre Engagement Renforcé</h2>
+            <div class="conclusion-text">
+                <p>L'obtention de la certification <span class="highlight">GRS</span> renforce notre engagement envers nos clients, nos collaborateurs et l'environnement.</p>
+                <p>Elle témoigne de notre détermination à exceller et nous pousse à viser des standards toujours plus élevés, assurant à nos partenaires des produits de <span class="highlight">qualité supérieure</span> de façon transparente et durable.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-dark footer pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Colonne 1 - Logo et Description -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <h1 class="text-dark fw-bold">GPI</h1>
+                </a>
+                <p class="mb-0 text-dark">
+                    Global Pack International est votre partenaire de confiance pour des solutions d'emballage plastique innovantes, durables et certifiées. L'acteur tunisien depuis 2009.
+                </p>
+            </div>
+
+            <!-- Colonne 2 - Contact -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="text-dark mb-4 fw-bold">Contactez-nous</h5>
+                <p class="text-dark mb-2">
+                    <i class="fa fa-map-marker-alt me-3 text-primary"></i>107, Rue Mosquée Erraoudha la Soukra Ariana Tunisie
+                </p>
+                <p class="text-dark mb-2">
+                    <i class="fa fa-phone-alt me-3 text-primary"></i>+216 70 681 380
+                </p>
+                <p class="text-dark mb-3">
+                    <i class="fa fa-envelope me-3 text-primary"></i>globalpackinternational@gmail.com
+                </p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-primary btn-square border-2 me-2" href="https://www.facebook.com/profile.php?id=61584160284965&rdid=SFINlIFesKajARa2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BtsFN7GpG%2F#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Colonne 3 - Liens rapides -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="text-dark mb-4 fw-bold">Liens Rapides</h5>
+                <div class="d-flex flex-column">
+                    <a class="btn btn-link mb-2" href="about.html">À Propos</a>
+                    <a class="btn btn-link mb-2" href="products.html">Nos Produits</a>
+                    <a class="btn btn-link mb-2" href="certification.html">Certifications</a>
+                    <!--<a class="btn btn-link mb-2" href="machines.html">Parc Machines</a> -->
+                    <a class="btn btn-link mb-2" href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <!-- Colonne 4 - Produits -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="text-dark mb-4 fw-bold">Nos Produits</h5>
+                <div class="d-flex flex-column">
+                    <a class="btn btn-link mb-2" href="#!">Sacs Plastiques Recyclés</a>
+                    <a class="btn btn-link mb-2" href="#!">Housses de Protection</a>
+                    <a class="btn btn-link mb-2" href="#!">Emballages Alimentaires</a>
+                    <a class="btn btn-link mb-2" href="#!">Sacs Industriels</a>
+                    <a class="btn btn-link mb-2" href="#!">Solutions Sur Mesure</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Copyright -->
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright border-top pt-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-dark">
+                        &copy; 2024 <a class="border-bottom text-dark text-decoration-none" href="index.html">Global Pack International</a>, Tous droits réservés.
+                    </span>
+                    <br>
+                    <small class="text-dark">Certifié GRS - Entreprise responsable et durable</small>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="#!" class="text-dark text-decoration-none me-3">Mentions Légales</a>
+                        <a href="#!" class="text-dark text-decoration-none me-3">Politique de Confidentialité</a>
+                        <a href="#!" class="text-dark text-decoration-none">CGV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.bg-dark {
+    background-color: #dde9e9 !important;
+}
+
+.text-primary {
+    color: #0459ab !important;
+}
+
+.btn-outline-primary {
+    color: #0459ab !important;
+    border-color: #0459ab !important;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0459ab !important;
+    color: #ffffff !important;
+    border-color: #0459ab !important;
+}
+
+.btn-link {
+    color: #444444 !important;
+    text-decoration: none;
+    padding: 4px 0;
+    text-align: left;
+    border: none;
+    background: none;
+    transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+    color: #0459ab !important;
+    text-decoration: none;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #0459ab !important;
+}
+
+.text-dark {
+    color: #444444 !important;
+}
+
+.footer-menu a {
+    color: #444444 !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: #0459ab !important;
+}
+
+.copyright {
+    border-top: 1px solid #b8d0d0 !important;
+}
+
+@media (max-width: 768px) {
+    .footer-menu {
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .footer-menu a {
+        margin: 0 8px;
+        display: inline-block;
+    }
+    
+    .btn-link {
+        text-align: center;
+    }
+}
+</style>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

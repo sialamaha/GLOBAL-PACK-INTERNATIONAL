@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>iSTUDIO - Interior Design Website Template Free</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white">
+                <a href="index.html" class="logo d-flex align-items-center me-auto">
+                    <img src="img/logogpi.PNG" alt="Logo" style="height:70px;">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                        <a href="about.html" class="nav-item nav-link">À propos</a>
+                        <a href="service.html" class="nav-item nav-link">Produits</a>
+
+                        <a href="certification.html" class="nav-item nav-link">Certifications</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <!--    <div class="container-fluid pb-5 bg-primary hero-header">
+        <div class="container py-5">
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-1 mb-0 animated slideInLeft">Services</h1>
+                </div>
+                <div class="col-lg-6 animated slideInRight">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-end mb-0">
+                            <li class="breadcrumb-item"><a class="text-primary" href="#!">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-primary" href="#!">Pages</a></li>
+                            <li class="breadcrumb-item text-secondary active" aria-current="page">Services</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Hero End -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .products-header {
+            background: linear-gradient(135deg, #26b8bf 0%, #0357a9 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .products-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="0,0 1000,50 1000,100 0,100"/></svg>');
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .recycled-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #26b8bf 0%, #0357a9 100%);
+            border-radius: 2px;
+        }
+
+        .recycled-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .recycled-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid#0257a8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recycled-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #0257a8, #0257a8);
+
+        }
+
+        .recycled-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .percentage {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #0257a8;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .percentage-label {
+            font-size: 1.2rem;
+            color: #0357a9;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .recycled-card p {
+            color: #666;
+        }
+
+        .products-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #26b8bf;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card i {
+            font-size: 2.5rem;
+            color: #0257a8;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #0357a9;
+        }
+
+        .product-card p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .features-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: #0257a8;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #0357a9;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #fff 0%, #fff 100%);
+            color: #353232;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #0257a8;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: #0257a8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .recycled-grid,
+            .products-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- En-tête des produits -->
+    <!--  <header class="products-header">
+        <div class="container">
+            
+            <h1>Nos Produits</h1>
+            <p class="subtitle">Des solutions d'emballage plastique innovantes, durables et adaptées à tous vos besoins</p>
+        </div>
+    </header> -->
+
+    <!-- Section Plastique Recyclé -->
+    <section class="recycled-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Plastique Recyclé</h2>
+                <p>Engagés pour l'environnement avec nos gammes de produits recyclés</p>
+            </div>
+
+            <div class="recycled-grid">
+                <div class="recycled-card">
+                    <div class="percentage">100%</div>
+                    <div class="percentage-label">Recyclé</div>
+                    <p>Notre gamme premium entièrement fabriquée à partir de matières recyclées, pour un impact
+                        environnemental minimal.</p>
+                </div>
+
+                <div class="recycled-card">
+                    <div class="percentage">70%</div>
+                    <div class="percentage-label">Recyclé</div>
+                    <p>Solution équilibrée alliant performance technique et engagement environnemental significatif.</p>
+                </div>
+
+                <div class="recycled-card">
+                    <div class="percentage">50%</div>
+                    <div class="percentage-label">Recyclé</div>
+                    <p>Option économique qui intègre une part importante de matières recyclées dans sa composition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Produits -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notre Gamme de Produits Personnalisé</h2>
+                <p>Des solutions d'emballage adaptées à tous vos besoins</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <a href="produit-sacs-standard.html">
+                        <h3>Sacs & Sachets Standard</h3>
+                        <p>Sacs et sachets plastiques standards pour tous usagess professionnels.</p>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <i class="fas fa-tshirt"></i>
+                    <a href="produit-housses-protection.html">
+                        <h3>Housses de Protection</h3>
+                        <p>Housses de protection pour préserver vos produits pendant le stockage et le transport.</p>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <i class="fas fa-film"></i>
+                    <a href="produit-gaines-films.html">
+                        <h3>Gaines & Films Plastique</h3>
+                        <p>Gaines et films en plastique pour l'emballage et la protection de vos marchandises.</p>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <i class="fas fa-roll"></i>
+                    <a href="produit-sachets-pre-ouverts.html">
+                        <h3>Sachets Pré-ouverts</h3>
+                        <p>Sachets plastique pré-ouverts en rouleau pour un usage pratique et rapide.</p>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <i class="fas fa-gem"></i>
+                    <a href="produit-polypropylène.html">
+                        <h3>Sachets Polypropylène Brillant</h3>
+                        <p>Sachets en polypropylène très brillants et transparents pour valoriser vos produits.</p>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <i class="fas fa-box-open"></i>
+                    <a href="produit-sacs-soufflets.html">
+                        <h3>Sacs à Soufflets</h3>
+                        <p>Sacs et sachets à soufflets résistants pour vos produits volumineux et lourds.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Caractéristiques -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Points Forts</h2>
+                <p>Ce qui fait la différence Global Pack International</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Écologique</h3>
+                    <p>Produits adaptés aux normes environnementales les plus strictes</p>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Personnalisé</h3>
+                    <p>Solutions sur mesure répondant aux demandes spécifiques des clients</p>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-award"></i>
+                    <h3>Certifié</h3>
+                    <p>Produits certifiés GRS pour une qualité et traçabilité garanties</p>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Innovant</h3>
+                    <p>Recherche constante d'amélioration et d'innovation produit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Des solutions d'emballage adaptées à vos besoins</h2>
+            <p>Contactez-nous pour discuter de votre projet et obtenir une solution personnalisée</p>
+            <a href="#" class="cta-button">Demander un devis</a>
+        </div>
+    </section>
+
+   
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-dark footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Colonne 1 - Logo et Description -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-dark fw-bold">GPI</h1>
+                    </a>
+                    <p class="mb-0 text-dark">
+                        Global Pack International est votre partenaire de confiance pour des solutions d'emballage
+                        plastique innovantes, durables et certifiées. L'acteur tunisien depuis 2009.
+                    </p>
+                </div>
+
+                <!-- Colonne 2 - Contact -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-dark mb-4 fw-bold">Contactez-nous</h5>
+                    <p class="text-dark mb-2">
+                        <i class="fa fa-map-marker-alt me-3 text-primary"></i>107, Rue Mosquée Erraoudha la Soukra
+                        Ariana Tunisie
+                    </p>
+                    <p class="text-dark mb-2">
+                        <i class="fa fa-phone-alt me-3 text-primary"></i>+216 70 681 380
+                    </p>
+                    <p class="text-dark mb-3">
+                        <i class="fa fa-envelope me-3 text-primary"></i>globalpackinternational@gmail.com
+                    </p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-primary btn-square border-2 me-2"
+                            href="https://www.facebook.com/profile.php?id=61584160284965&rdid=SFINlIFesKajARa2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BtsFN7GpG%2F#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Colonne 3 - Liens rapides -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="text-dark mb-4 fw-bold">Liens Rapides</h5>
+                    <div class="d-flex flex-column">
+                        <a class="btn btn-link mb-2" href="about.html">À Propos</a>
+                        <a class="btn btn-link mb-2" href="products.html">Nos Produits</a>
+                        <a class="btn btn-link mb-2" href="certification.html">Certifications</a>
+                        <!--<a class="btn btn-link mb-2" href="machines.html">Parc Machines</a> -->
+                        <a class="btn btn-link mb-2" href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Colonne 4 - Produits -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-dark mb-4 fw-bold">Nos Produits</h5>
+                    <div class="d-flex flex-column">
+                        <a class="btn btn-link mb-2" href="#!">Sacs Plastiques Recyclés</a>
+                        <a class="btn btn-link mb-2" href="#!">Housses de Protection</a>
+                        <a class="btn btn-link mb-2" href="#!">Emballages Alimentaires</a>
+                        <a class="btn btn-link mb-2" href="#!">Sacs Industriels</a>
+                        <a class="btn btn-link mb-2" href="#!">Solutions Sur Mesure</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Copyright -->
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright border-top pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-dark">
+                            &copy; 2024 <a class="border-bottom text-dark text-decoration-none" href="index.html">Global
+                                Pack International</a>, Tous droits réservés.
+                        </span>
+                        <br>
+                        <small class="text-dark">Certifié GRS - Entreprise responsable et durable</small>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="#!" class="text-dark text-decoration-none me-3">Mentions Légales</a>
+                            <a href="#!" class="text-dark text-decoration-none me-3">Politique de Confidentialité</a>
+                            <a href="#!" class="text-dark text-decoration-none">CGV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .bg-dark {
+            background-color: #dde9e9 !important;
+        }
+
+        .text-primary {
+            color: #0459ab !important;
+        }
+
+        .btn-outline-primary {
+            color: #0459ab !important;
+            border-color: #0459ab !important;
+            background-color: transparent;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #0459ab !important;
+            color: #ffffff !important;
+            border-color: #0459ab !important;
+        }
+
+        .btn-link {
+            color: #444444 !important;
+            text-decoration: none;
+            padding: 4px 0;
+            text-align: left;
+            border: none;
+            background: none;
+            transition: color 0.3s ease;
+        }
+
+        .btn-link:hover {
+            color: #0459ab !important;
+            text-decoration: none;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #0459ab !important;
+        }
+
+        .text-dark {
+            color: #444444 !important;
+        }
+
+        .footer-menu a {
+            color: #444444 !important;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-menu a:hover {
+            color: #0459ab !important;
+        }
+
+        .copyright {
+            border-top: 1px solid #b8d0d0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .footer-menu {
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            .footer-menu a {
+                margin: 0 8px;
+                display: inline-block;
+            }
+
+            .btn-link {
+                text-align: center;
+            }
+        }
+    </style>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

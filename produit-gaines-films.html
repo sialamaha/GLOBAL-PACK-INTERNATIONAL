@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Global Pack International - Emballages Écologiques</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white">
+                <a href="index.html" class="logo d-flex align-items-center me-auto">
+                    <img src="img/logogpi.PNG" alt="Logo" style="height:70px;">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                        <a href="about.html" class="nav-item nav-link">À propos</a>
+                        <a href="produit.html" class="nav-item nav-link">Produits</a>
+
+                        <a href="certification.html" class="nav-item nav-link">Certifications</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+ 
+    <style>
+        /* Styles pour les icônes Font Awesome */
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 0.5rem;
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 4px 12px rgba(2, 87, 168, 0.3);
+            position: relative;
+        }
+
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+            pointer-events: none;
+        }
+
+        .app-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 0.5rem;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #0257a8;
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+
+        .app-icon::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(2, 87, 168, 0.1) 0%, rgba(2, 87, 168, 0) 100%);
+            pointer-events: none;
+        }
+
+        /* Autres styles existants */
+        .protection-features {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .protection-features h2 {
+            color: #03201f;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-top: 2px solid #27b0b6;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .feature-card h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            color: #0257a8;
+        }
+
+        .feature-card p {
+            font-size: 0.8rem;
+        }
+
+        .applications {
+            background: linear-gradient(135deg, #fff 0%, #fff 100%);
+            color: #555;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .applications h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .application-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.85rem;
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .application-item:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .application-item h4 {
+            color: #0257a8;
+            margin-bottom: 0.3rem;
+        }
+
+        .technical-specs {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        .specs-table th,
+        .specs-table td {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .specs-table th {
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+            font-weight: bold;
+        }
+
+        .specs-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 8px rgba(2, 87, 168, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(2, 87, 168, 0.4);
+        }
+
+        .btn-contact {
+            background: #0257a8;
+            display: block;
+            text-align: center;
+            margin: 1.5rem auto;
+            max-width: 250px;
+            font-size: 0.9rem;
+            padding: 0.8rem 1.5rem;
+            box-shadow: 0 3px 8px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-contact:hover {
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        /* Product Header */
+        .product-header {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-header h1 {
+            color: #0257a8;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive pour le tableau */
+        @media (max-width: 768px) {
+            .specs-table {
+                font-size: 0.7rem;
+            }
+            
+            .specs-table th, .specs-table td {
+                padding: 0.4rem 0.3rem;
+            }
+            
+            .product-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .specs-table {
+                font-size: 0.65rem;
+            }
+            
+            .specs-table th, .specs-table td {
+                padding: 0.3rem 0.2rem;
+            }
+        }
+    </style>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="produit.html">Produits</a> > 
+        </div>
+    </div>
+
+    <div class="container">
+       
+
+        <!-- Avantages -->
+        <div class="protection-features">
+            <h2>Avantages de Nos Films et Gaines</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h4>Sur Mesure</h4>
+                    <p>Dimensions adaptées à vos besoins spécifiques</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Protection Maximale</h4>
+                    <p>Contre l'humidité, la poussière et les chocs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Facile à Utiliser</h4>
+                    <p>Mise en place rapide et efficace</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h4>Usage Industriel</h4>
+                    <p>Résistance aux environnements exigeants</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Applications -->
+        <div class="applications">
+            <h2>Applications Industrielles</h2>
+            <div class="applications-grid">
+                <div class="application-item">
+                    <div class="app-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h4>Industrie</h4>
+                    <p>Protection des pièces mécaniques</p>
+                </div>
+                <div class="application-item">
+                    <div class="app-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h4>Logistique</h4>
+                    <p>Emballage des palettes</p>
+                </div>
+                <div class="application-item">
+                    <div class="app-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h4>E-commerce</h4>
+                    <p>Protection des colis</p>
+                </div>
+                <div class="application-item">
+                    <div class="app-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h4>Commerce</h4>
+                    <p>Présentation des produits</p>
+                </div>
+                <div class="application-item">
+                    <div class="app-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h4>BTP</h4>
+                    <p>Protection des matériaux</p>
+                </div>
+                <div class="application-item">
+                    <div class="app-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Pièces Auto</h4>
+                    <p>Emballage des composants</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spécifications Techniques -->
+        <div class="technical-specs">
+            <h2>Spécifications Techniques - Films et Gaines</h2>
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Formats Standards</th>
+                        <th>Applications</th>
+                        <th>Caractéristiques</th>
+                        <th>Personnalisation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Film Rétractable</strong></td>
+                        <td>16x22, 40x60, 80x80 cm</td>
+                        <td>Palettes, groupes de produits</td>
+                        <td>Protection optimale, étanchéité</td>
+                        <td>Dimensions sur mesure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gaines de Protection</strong></td>
+                        <td>50x80 cm, formats longs</td>
+                        <td>Pièces mécaniques, tubes</td>
+                        <td>Anti-rayures, protection surface</td>
+                        <td>Diamètres personnalisés</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Film Étirable</strong></td>
+                        <td>Largeurs variables</td>
+                        <td>Stabilisation charges, regroupement</td>
+                        <td>Élasticité, résistance mécanique</td>
+                        <td>Largeurs adaptées</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gaines Industrielles</strong></td>
+                        <td>Formats standards et spéciaux</td>
+                        <td>Protection pièces précises</td>
+                        <td>Transparence, résistance chimique</td>
+                        <td>Formats spécifiques</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Film de Suremballage</strong></td>
+                        <td>16x22 à 80x80 cm</td>
+                        <td>Protection contre intempéries</td>
+                        <td>Imperméabilité, UV protection</td>
+                        <td>Épaisseurs variables</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tableau des Formats Standards -->
+        <div class="technical-specs">
+            <h2>Formats Standards Disponibles</h2>
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Format</th>
+                        <th>Dimensions (cm)</th>
+                        <th>Usage Recommandé</th>
+                        <th>Type de Produit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Petit Format</strong></td>
+                        <td>16 x 22</td>
+                        <td>Emballage léger, petits produits</td>
+                        <td>Film et Gaines</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Format Moyen</strong></td>
+                        <td>40 x 60</td>
+                        <td>Produits standard, logistique</td>
+                        <td>Film et Gaines</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grand Format</strong></td>
+                        <td>80 x 80</td>
+                        <td>Palettes, produits volumineux</td>
+                        <td>Film Rétractable</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Format Rectangulaire</strong></td>
+                        <td>50 x 80</td>
+                        <td>Pièces longues, tubes</td>
+                        <td>Gaines de Protection</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Personnalisé</strong></td>
+                        <td>Sur mesure</td>
+                        <td>Besoins spécifiques</td>
+                        <td>Tous types</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Call to Action -->
+        <a href="contact.html" class="btn btn-contact">
+            <i class="fas fa-film" style="margin-right: 8px;"></i>
+            Demander un Devis pour Films et Gaines
+        </a>
+    </div>
+
+
+  
+
+
+
+
+
+    
+
+    <div class="container-fluid bg-dark text-dark footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Colonne 1 - Logo et Description -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-dark fw-bold">GPI</h1>
+                    </a>
+                    <p class="mb-0 text-dark">
+                        Global Pack International est votre partenaire de confiance pour des solutions d'emballage
+                        plastique innovantes, durables et certifiées. L'acteur tunisien depuis 2009.
+                    </p>
+                </div>
+
+                <!-- Colonne 2 - Contact -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-dark mb-4 fw-bold">Contactez-nous</h5>
+                    <p class="text-dark mb-2">
+                        <i class="fa fa-map-marker-alt me-3 text-primary"></i>107, Rue Mosquée Erraoudha la Soukra
+                        Ariana Tunisie
+                    </p>
+                    <p class="text-dark mb-2">
+                        <i class="fa fa-phone-alt me-3 text-primary"></i>+216 70 681 380
+                    </p>
+                    <p class="text-dark mb-3">
+                        <i class="fa fa-envelope me-3 text-primary"></i>globalpackinternational@gmail.com
+                    </p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-primary btn-square border-2 me-2"
+                            href="https://www.facebook.com/profile.php?id=61584160284965&rdid=SFINlIFesKajARa2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BtsFN7GpG%2F#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Colonne 3 - Liens rapides -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="text-dark mb-4 fw-bold">Liens Rapides</h5>
+                    <div class="d-flex flex-column">
+                        <a class="btn btn-link mb-2" href="about.html">À Propos</a>
+                        <a class="btn btn-link mb-2" href="products.html">Nos Produits</a>
+                        <a class="btn btn-link mb-2" href="certification.html">Certifications</a>
+                        <!--<a class="btn btn-link mb-2" href="machines.html">Parc Machines</a> -->
+                        <a class="btn btn-link mb-2" href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Colonne 4 - Produits -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-dark mb-4 fw-bold">Nos Produits</h5>
+                    <div class="d-flex flex-column">
+                        <a class="btn btn-link mb-2" href="#!">Sacs Plastiques Recyclés</a>
+                        <a class="btn btn-link mb-2" href="#!">Housses de Protection</a>
+                        <a class="btn btn-link mb-2" href="#!">Emballages Alimentaires</a>
+                        <a class="btn btn-link mb-2" href="#!">Sacs Industriels</a>
+                        <a class="btn btn-link mb-2" href="#!">Solutions Sur Mesure</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Copyright -->
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright border-top pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-dark">
+                            &copy; 2024 <a class="border-bottom text-dark text-decoration-none" href="index.html">Global
+                                Pack International</a>, Tous droits réservés.
+                        </span>
+                        <br>
+                        <small class="text-dark">Certifié GRS - Entreprise responsable et durable</small>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="#!" class="text-dark text-decoration-none me-3">Mentions Légales</a>
+                            <a href="#!" class="text-dark text-decoration-none me-3">Politique de Confidentialité</a>
+                            <a href="#!" class="text-dark text-decoration-none">CGV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .bg-dark {
+            background-color: #dde9e9 !important;
+        }
+
+        .text-primary {
+            color: #0459ab !important;
+        }
+
+        .btn-outline-primary {
+            color: #0459ab !important;
+            border-color: #0459ab !important;
+            background-color: transparent;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #0459ab !important;
+            color: #ffffff !important;
+            border-color: #0459ab !important;
+        }
+
+        .btn-link {
+            color: #444444 !important;
+            text-decoration: none;
+            padding: 4px 0;
+            text-align: left;
+            border: none;
+            background: none;
+            transition: color 0.3s ease;
+        }
+
+        .btn-link:hover {
+            color: #0459ab !important;
+            text-decoration: none;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #0459ab !important;
+        }
+
+        .text-dark {
+            color: #444444 !important;
+        }
+
+        .footer-menu a {
+            color: #444444 !important;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-menu a:hover {
+            color: #0459ab !important;
+        }
+
+        .copyright {
+            border-top: 1px solid #b8d0d0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .footer-menu {
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            .footer-menu a {
+                margin: 0 8px;
+                display: inline-block;
+            }
+
+            .btn-link {
+                text-align: center;
+            }
+        }
+    </style>
+
+
+
+    <!-- Footer Start -->
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

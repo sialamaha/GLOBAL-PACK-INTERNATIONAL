@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Global Pack International - Emballages Écologiques</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white">
+                <a href="index.html" class="logo d-flex align-items-center me-auto">
+                    <img src="img/logogpi.PNG" alt="Logo" style="height:70px;">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                        <a href="about.html" class="nav-item nav-link">À propos</a>
+                        <a href="produit.html" class="nav-item nav-link">Produits</a>
+
+                        <a href="certification.html" class="nav-item nav-link">Certifications</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        .breadcrumb {
+            background: white;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .breadcrumb a {
+            color: #0257a8;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Product Header */
+        .product-header {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0257a8 0%, #0257a8 100%);
+        }
+
+        .product-header h1 {
+            color: #0257a8;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Volume Feature */
+        .volume-feature {
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .volume-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .volume-text {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Styles pour les icônes Font Awesome */
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 0.5rem;
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 4px 12px rgba(2, 87, 168, 0.3);
+            position: relative;
+        }
+
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+            pointer-events: none;
+        }
+
+        .app-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 0.5rem;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #0257a8;
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+
+        .app-icon::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(2, 87, 168, 0.1) 0%, rgba(2, 87, 168, 0) 100%);
+            pointer-events: none;
+        }
+
+        /* Autres styles existants */
+        .protection-features {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .protection-features h2 {
+            color: #03201f;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-top: 2px solid #0257a8;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .feature-card h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            color: #0257a8;
+        }
+
+        .feature-card p {
+            font-size: 0.8rem;
+        }
+
+        .applications {
+            background: linear-gradient(135deg, #fff 0%, #fff 100%);
+            color: #555;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .applications h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .application-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.85rem;
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .application-item:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .application-item h4 {
+            color: #0257a8;
+            margin-bottom: 0.3rem;
+        }
+
+        .technical-specs {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .technical-specs h2 {
+            color: #03201f;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        .specs-table th,
+        .specs-table td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        .specs-table th {
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+            font-weight: bold;
+        }
+
+        .specs-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 8px rgba(2, 87, 168, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(2, 87, 168, 0.4);
+        }
+
+        .btn-contact {
+            background: #0257a8;
+            display: block;
+            text-align: center;
+            margin: 1.5rem auto;
+            max-width: 250px;
+            font-size: 0.9rem;
+            padding: 0.8rem 1.5rem;
+            box-shadow: 0 3px 8px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-contact:hover {
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .features-grid,
+            .applications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .specs-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+
+        .header-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0257a8 0%, #0257a8 100%);
+        }
+
+        .header-card h1 {
+            color: #0257a8;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-card h2 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .volume-card {
+            background: linear-gradient(135deg, #0257a8 0%, #0257a8 100%);
+            color: white;
+        }
+
+        .volume-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .volume-text {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="produit.html">Produits</a> >
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Product Header -->
+        <div class="container">
+            <!-- Header Cards -->
+            
+
+            <!-- Protection Features avec Font Awesome -->
+            <div class="protection-features">
+                <h2>Avantages de Nos Sacs à Soufflets</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h4>Volume Augmenté</h4>
+                        <p>Jusqu'à 40% de capacité supplémentaire grâce aux soufflets</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h4>Stabilité</h4>
+                        <p>Meilleure tenue pour les produits irréguliers</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Protection</h4>
+                        <p>Espace d'air pour protéger les produits fragiles</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4>Résistance</h4>
+                        <p>Renforts naturels grâce à la structure en soufflet</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="applications">
+                <h2>Applications des Sacs à Soufflets</h2>
+                <div class="applications-grid">
+                    <div class="application-item">
+                        <div class="app-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h4>Textile</h4>
+                        <p>Vêtements épais et pulls</p>
+                    </div>
+                    <div class="application-item">
+                        <div class="app-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <h4>E-commerce</h4>
+                        <p>Colis volumineux</p>
+                    </div>
+                    <div class="application-item">
+                        <div class="app-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h4>Pièces Industrielles</h4>
+                        <p>Composants encombrants</p>
+                    </div>
+                    <div class="application-item">
+                        <div class="app-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h4>Literie</h4>
+                        <p>Oreillers et couettes</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="header-cards">
+                <div class="header-card">
+                    <div class="product-badge">CAPACITÉ AUGMENTÉE</div>
+                    <h1>Sacs à Soufflets</h1>
+                    <p>Sacs et sachets à soufflets réclamés pour vos produits volumineux et fourrés</p>
+                </div>
+
+                <div class="header-card volume-card">
+                    <div class="volume-icon">📦</div>
+                    <h2>+40% de Volume Utile</h2>
+                    <p class="volume-text">Grâce à leurs soufflets latéraux, nos sacs offrent une capacité d'emport
+                        supérieure pour vos produits les plus encombrants</p>
+                </div>
+            </div>
+            <!-- Technical Specifications -->
+            <div class="technical-specs">
+                <h2>Spécifications Techniques</h2>
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Référence</th>
+                            <th>Dimensions Base (cm)</th>
+                            <th>Soufflets</th>
+                            <th>Matière</th>
+                            <th>Couleur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20+(2*5)*36 HD</td>
+                            <td>20 x 36</td>
+                            <td>2×5 cm</td>
+                            <td>HDPE</td>
+                            <td>Transparent</td>
+                        </tr>
+                        <tr>
+                            <td>20+(2*5)*35 HD</td>
+                            <td>20 x 35</td>
+                            <td>2×5 cm</td>
+                            <td>HDPE</td>
+                            <td>Transparent</td>
+                        </tr>
+                        <tr>
+                            <td>27+(2*5)*48 HD</td>
+                            <td>27 x 48</td>
+                            <td>2×5 cm</td>
+                            <td>HDPE</td>
+                            <td>Transparent</td>
+                        </tr>
+                        <tr>
+                            <td>55+(2*15)*70 PE</td>
+                            <td>55 x 70</td>
+                            <td>2×15 cm</td>
+                            <td>LDPE</td>
+                            <td>Rose</td>
+                        </tr>
+                        <tr>
+                            <td>45+(2*18)*50 PE</td>
+                            <td>45 x 50</td>
+                            <td>2×18 cm</td>
+                            <td>LDPE</td>
+                            <td>Bleu VCI</td>
+                        </tr>
+                        <tr>
+                            <td>60+(2*10)*100 PE</td>
+                            <td>60 x 100</td>
+                            <td>2×10 cm</td>
+                            <td>LDPE</td>
+                            <td>Multi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Call to Action avec Font Awesome -->
+            <a href="contact.html" class="btn btn-contact">
+                <i class="fas fa-box" style="margin-right: 8px;"></i>
+                Demander un Devis pour Nos Sacs à Soufflets
+            </a>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="container-fluid bg-dark text-dark footer pt-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <!-- Colonne 1 - Logo et Description -->
+                    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                        <a href="index.html" class="d-inline-block mb-3">
+                            <h1 class="text-dark fw-bold">GPI</h1>
+                        </a>
+                        <p class="mb-0 text-dark">
+                            Global Pack International est votre partenaire de confiance pour des solutions d'emballage
+                            plastique innovantes, durables et certifiées. L'acteur tunisien depuis 2009.
+                        </p>
+                    </div>
+
+                    <!-- Colonne 2 - Contact -->
+                    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                        <h5 class="text-dark mb-4 fw-bold">Contactez-nous</h5>
+                        <p class="text-dark mb-2">
+                            <i class="fa fa-map-marker-alt me-3 text-primary"></i>107, Rue Mosquée Erraoudha la Soukra
+                            Ariana Tunisie
+                        </p>
+                        <p class="text-dark mb-2">
+                            <i class="fa fa-phone-alt me-3 text-primary"></i>+216 70 681 380
+                        </p>
+                        <p class="text-dark mb-3">
+                            <i class="fa fa-envelope me-3 text-primary"></i>globalpackinternational@gmail.com
+                        </p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-primary btn-square border-2 me-2"
+                                href="https://www.facebook.com/profile.php?id=61584160284965&rdid=SFINlIFesKajARa2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BtsFN7GpG%2F#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Colonne 3 - Liens rapides -->
+                    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                        <h5 class="text-dark mb-4 fw-bold">Liens Rapides</h5>
+                        <div class="d-flex flex-column">
+                            <a class="btn btn-link mb-2" href="about.html">À Propos</a>
+                            <a class="btn btn-link mb-2" href="products.html">Nos Produits</a>
+                            <a class="btn btn-link mb-2" href="certification.html">Certifications</a>
+                            <!--<a class="btn btn-link mb-2" href="machines.html">Parc Machines</a> -->
+                            <a class="btn btn-link mb-2" href="contact.html">Contact</a>
+                        </div>
+                    </div>
+
+                    <!-- Colonne 4 - Produits -->
+                    <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                        <h5 class="text-dark mb-4 fw-bold">Nos Produits</h5>
+                        <div class="d-flex flex-column">
+                            <a class="btn btn-link mb-2" href="#!">Sacs Plastiques Recyclés</a>
+                            <a class="btn btn-link mb-2" href="#!">Housses de Protection</a>
+                            <a class="btn btn-link mb-2" href="#!">Emballages Alimentaires</a>
+                            <a class="btn btn-link mb-2" href="#!">Sacs Industriels</a>
+                            <a class="btn btn-link mb-2" href="#!">Solutions Sur Mesure</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Copyright -->
+            <div class="container wow fadeIn" data-wow-delay="0.1s">
+                <div class="copyright border-top pt-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            <span class="text-dark">
+                                &copy; 2024 <a class="border-bottom text-dark text-decoration-none"
+                                    href="index.html">Global
+                                    Pack International</a>, Tous droits réservés.
+                            </span>
+                            <br>
+                            <small class="text-dark">Certifié GRS - Entreprise responsable et durable</small>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#!" class="text-dark text-decoration-none me-3">Mentions Légales</a>
+                                <a href="#!" class="text-dark text-decoration-none me-3">Politique de
+                                    Confidentialité</a>
+                                <a href="#!" class="text-dark text-decoration-none">CGV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .bg-dark {
+                background-color: #dde9e9 !important;
+            }
+
+            .text-primary {
+                color: #0459ab !important;
+            }
+
+            .btn-outline-primary {
+                color: #0459ab !important;
+                border-color: #0459ab !important;
+                background-color: transparent;
+            }
+
+            .btn-outline-primary:hover {
+                background-color: #0459ab !important;
+                color: #ffffff !important;
+                border-color: #0459ab !important;
+            }
+
+            .btn-link {
+                color: #444444 !important;
+                text-decoration: none;
+                padding: 4px 0;
+                text-align: left;
+                border: none;
+                background: none;
+                transition: color 0.3s ease;
+            }
+
+            .btn-link:hover {
+                color: #0459ab !important;
+                text-decoration: none;
+            }
+
+            .border-bottom {
+                border-bottom: 1px solid #0459ab !important;
+            }
+
+            .text-dark {
+                color: #444444 !important;
+            }
+
+            .footer-menu a {
+                color: #444444 !important;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .footer-menu a:hover {
+                color: #0459ab !important;
+            }
+
+            .copyright {
+                border-top: 1px solid #b8d0d0 !important;
+            }
+
+            @media (max-width: 768px) {
+                .footer-menu {
+                    margin-top: 15px;
+                    text-align: center;
+                }
+
+                .footer-menu a {
+                    margin: 0 8px;
+                    display: inline-block;
+                }
+
+                .btn-link {
+                    text-align: center;
+                }
+            }
+        </style>
+
+
+
+        <!-- Footer Start -->
+
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+</body>
+
+</html>
