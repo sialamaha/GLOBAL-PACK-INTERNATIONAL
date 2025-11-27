@@ -47,7 +47,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white">
                 <a href="index.html" class="logo d-flex align-items-center me-auto">
-                    <img src="img/logogpi.PNG" alt="Logo" style="height:70px;">
+                    <img src="img/logogpi.PNG" alt="Logo" style="height:100px;">
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -362,6 +362,51 @@
                 grid-template-columns: 1fr;
             }
         }
+
+
+
+
+        .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    position: relative; /* nécessaire pour placer la flèche */
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card .arrow-circle {
+    position: absolute;
+    bottom: 150px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #FFC72A;
+    color: #0033A1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.product-card:hover .arrow-circle {
+    transform: translateX(5px);
+    background: #FFB500; /* léger effet au hover */
+}
+
     </style>
 
     <!-- En-tête des produits -->
@@ -418,7 +463,8 @@
                     <a href="produit-sacs-standard.html">
                         <h3>Sacs & Sachets Standard</h3>
                         <p>Sacs et sachets plastiques standards pour tous usagess professionnels.</p>
-                    </a>
+                         <span class="arrow-circle">&#8594;</span> <!-- flèche -->
+                    </a> 
                 </div>
 
                 <div class="product-card">
@@ -426,7 +472,8 @@
                     <a href="produit-housses-protection.html">
                         <h3>Housses de Protection</h3>
                         <p>Housses de protection pour préserver vos produits pendant le stockage et le transport.</p>
-                    </a>
+                        <span class="arrow-circle">&#8594;</span> <!-- flèche -->
+                    </a> 
                 </div>
 
                 <div class="product-card">
@@ -434,14 +481,16 @@
                     <a href="produit-gaines-films.html">
                         <h3>Gaines & Films Plastique</h3>
                         <p>Gaines et films en plastique pour l'emballage et la protection de vos marchandises.</p>
-                    </a>
+                        <span class="arrow-circle">&#8594;</span> <!-- flèche -->
+                    </a> 
                 </div>
 
                 <div class="product-card">
-                    <i class="fas fa-roll"></i>
+                    <i class="fas fa-box"></i>
                     <a href="produit-sachets-pre-ouverts.html">
                         <h3>Sachets Pré-ouverts</h3>
                         <p>Sachets plastique pré-ouverts en rouleau pour un usage pratique et rapide.</p>
+                        <span class="arrow-circle">&#8594;</span> <!-- flèche -->
                     </a>
                 </div>
 
@@ -450,7 +499,8 @@
                     <a href="produit-polypropylène.html">
                         <h3>Sachets Polypropylène Brillant</h3>
                         <p>Sachets en polypropylène très brillants et transparents pour valoriser vos produits.</p>
-                    </a>
+                        <span class="arrow-circle">&#8594;</span> <!-- flèche -->
+                    </a>  
                 </div>
 
                 <div class="product-card">
@@ -458,7 +508,8 @@
                     <a href="produit-sacs-soufflets.html">
                         <h3>Sacs à Soufflets</h3>
                         <p>Sacs et sachets à soufflets résistants pour vos produits volumineux et lourds.</p>
-                    </a>
+                        <span class="arrow-circle">&#8594;</span> <!-- flèche -->
+                    </a> 
                 </div>
             </div>
         </div>

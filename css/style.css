@@ -62,12 +62,12 @@
 .navbar {
     padding: 15px 0;
     font-family: "Space Grotesk", sans-serif;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .navbar .navbar-nav .nav-link {
     margin-left: 30px;
-    padding: 0;
+    padding: 10px;
     outline: none;
     color: var(--bs-dark);
 }
@@ -121,9 +121,9 @@
 
 /*** Hero Header ***/
 .hero-header {
-    margin-top: -100px;
+    margin-top: -130px;
     padding-top: 150px;
-    background: url(../img/hero-bg.jpg) top center no-repeat;
+    /* background: url(../img/hero-bg.jpg) top center no-repeat; */
     background-size: cover;
 }
 
