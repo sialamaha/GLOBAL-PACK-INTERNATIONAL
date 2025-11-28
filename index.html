@@ -35,60 +35,17 @@
 
 
 <script>
-let isTranslated = false;
-
-function toggleProfessionalTranslation() {
-    if (!isTranslated) {
-        // Activer la traduction discrète
-        if (!window.googleTranslateLoaded) {
-            var script = document.createElement('script');
-            script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateInit';
-            document.head.appendChild(script);
-            window.googleTranslateLoaded = true;
-        }
-        
-        setTimeout(function() {
-            var select = document.querySelector('.goog-te-combo');
-            if (select) {
-                select.value = 'en';
-                select.dispatchEvent(new Event('change'));
-            }
-        }, 1000);
-        
-        document.getElementById('currentLang').innerText = 'EN';
-        document.getElementById('langIcon').className = 'fa fa-language me-1';
-        isTranslated = true;
-    } else {
-        // Désactiver la traduction
-        window.location.reload();
-    }
-}
-
-function googleTranslateInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'fr',
-        includedLanguages: 'en,fr',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-    }, 'google_translate_element');
+function triggerBrowserTranslation() {
+    // Changer le texte du bouton
+    document.getElementById('currentLang').innerText = 'EN';
+    
+    // Message d'instructions
+    alert("🌍 Traduction activée !\n\nVotre navigateur va maintenant traduire la page automatiquement.\n\nSi la traduction ne démarre pas :\n• Clic droit n'importe où\n• 'Traduire en anglais'");
+    
+    // Forcer la détection de langue
+    document.documentElement.lang = 'fr';
 }
 </script>
-
-<style>
-/* Cacher complètement l'interface Google Translate */
-.goog-te-banner-frame, 
-.goog-te-gadget, 
-.goog-te-combo, 
-.goog-logo-link, 
-.goog-te-gadget span, 
-#google_translate_element {
-    display: none !important;
-}
-
-body {
-    top: 0px !important;
-}
-</style>
 </head>
 
 <body>
@@ -126,8 +83,8 @@ body {
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
 
                     </div>
-          <div class="nav-link language-btn" onclick="toggleProfessionalTranslation()">
-        <i class="fa fa-globe me-1" id="langIcon"></i>
+          <div class="nav-link d-flex align-items-center" style="cursor: pointer;" onclick="triggerBrowserTranslation()">
+        <i class="fa fa-globe me-1"></i>
         <span id="currentLang">FR</span>
     </div>
 
