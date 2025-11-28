@@ -519,12 +519,6 @@
                     <a class="btn btn-outline-primary btn-square border-2 me-2" href="https://www.facebook.com/profile.php?id=61584160284965&rdid=SFINlIFesKajARa2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BtsFN7GpG%2F#">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!">
-                        <i class="fab fa-instagram"></i>
-                    </a>
                 </div>
             </div>
 
@@ -535,20 +529,23 @@
                     <a class="btn btn-link mb-2" href="about.html">À Propos</a>
                     <a class="btn btn-link mb-2" href="products.html">Nos Produits</a>
                     <a class="btn btn-link mb-2" href="certification.html">Certifications</a>
-                    <!--<a class="btn btn-link mb-2" href="machines.html">Parc Machines</a> -->
                     <a class="btn btn-link mb-2" href="contact.html">Contact</a>
                 </div>
             </div>
 
-            <!-- Colonne 4 - Produits -->
+            <!-- Colonne 4 - Localisation (remplace Nos Produits) -->
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                <h5 class="text-dark mb-4 fw-bold">Nos Produits</h5>
-                <div class="d-flex flex-column">
-                    <a class="btn btn-link mb-2" href="#!">Sacs Plastiques Recyclés</a>
-                    <a class="btn btn-link mb-2" href="#!">Housses de Protection</a>
-                    <a class="btn btn-link mb-2" href="#!">Emballages Alimentaires</a>
-                    <a class="btn btn-link mb-2" href="#!">Sacs Industriels</a>
-                    <a class="btn btn-link mb-2" href="#!">Solutions Sur Mesure</a>
+                <h5 class="text-dark mb-4 fw-bold">Localisation</h5>
+                <div class="location-map">
+                    <iframe 
+                         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2543.3745612057396!2d10.21268782291494!3d36.88056580018053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDUyJzUzLjkiTiAxMMKwMTInNTAuNyJF!5e1!3m2!1sfr!2stn!4v1764308742929!5m2!1sfr!2stn"
+                        width="100%" 
+                        height="200" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -560,7 +557,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <span class="text-dark">
-                        &copy; 2024 <a class="border-bottom text-dark text-decoration-none" href="index.html">Global Pack International</a>, Tous droits réservés.
+                        &copy; 2025 <a class="border-bottom text-dark text-decoration-none" href="index.html">Global Pack International</a>, Tous droits réservés.
                     </span>
                     <br>
                     <small class="text-dark">Certifié GRS - Entreprise responsable et durable</small>
@@ -579,7 +576,7 @@
 
 <style>
 .bg-dark {
-    background-color: #dde9e9 !important;
+   background-color: #e6f0ef !important;
 }
 
 .text-primary {
@@ -635,6 +632,10 @@
     border-top: 1px solid #b8d0d0 !important;
 }
 
+.location-map iframe {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 @media (max-width: 768px) {
     .footer-menu {
         margin-top: 15px;
@@ -648,6 +649,10 @@
     
     .btn-link {
         text-align: center;
+    }
+    
+    .location-map iframe {
+        height: 180px;
     }
 }
 </style>
