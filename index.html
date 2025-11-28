@@ -31,72 +31,96 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Dans la section <head> de votre site -->
-<div id="google_translate_element" style="display:none;"></div>
 
+
+
+        <!-- Dans le <head> -->
 <script>
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'fr',
-        includedLanguages: 'en,fr',
-        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-}
-
-function toggleTranslation() {
-    // Charger Google Translate si pas déjà fait
-    if (!window.googleTranslateLoaded) {
-        var script = document.createElement('script');
-        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        document.head.appendChild(script);
-        window.googleTranslateLoaded = true;
-        
-        // Attendre que Google Translate charge puis basculer en anglais
+function activateProfessionalTranslation() {
+    // Créer un overlay de traduction professionnel
+    var translateOverlay = document.createElement('div');
+    translateOverlay.id = 'translate-overlay';
+    translateOverlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 9999;
+        border: none;
+    `;
+    
+    var iframe = document.createElement('iframe');
+    iframe.src = `https://translate.google.com/translate?hl=fr&sl=fr&tl=en&u=${encodeURIComponent(window.location.href)}&sandbox=1`;
+    iframe.style.cssText = `
+        width: 100%;
+        height: 100%;
+        border: none;
+    `;
+    iframe.onload = function() {
+        // Cacher la bannière Google Translate
         setTimeout(function() {
-            forceEnglishTranslation();
-        }, 2000);
-    } else {
-        // Si déjà chargé, basculer entre FR et EN
-        switchLanguage();
-    }
+            var banner = iframe.contentDocument.querySelector('.goog-te-banner-frame');
+            if (banner) banner.style.display = 'none';
+        }, 1000);
+    };
     
-    // Changer l'apparence du bouton immédiatement
-    var currentLang = document.getElementById('currentLang');
-    var langIcon = document.getElementById('langIcon');
+    translateOverlay.appendChild(iframe);
+    document.body.appendChild(translateOverlay);
     
-    if (currentLang.innerText === 'FR') {
-        currentLang.innerText = 'EN';
-        langIcon.className = 'fa fa-language me-1';
-    } else {
-        currentLang.innerText = 'FR';
-        langIcon.className = 'fa fa-globe me-1';
-    }
-}
-
-function forceEnglishTranslation() {
-    var select = document.querySelector('.goog-te-combo');
-    if (select && select.value !== 'en') {
-        select.value = 'en';
-        select.dispatchEvent(new Event('change'));
-    }
-}
-
-function switchLanguage() {
-    var select = document.querySelector('.goog-te-combo');
-    if (select) {
-        if (select.value === 'fr') {
-            select.value = 'en';
-        } else {
-            select.value = 'fr';
-        }
-        select.dispatchEvent(new Event('change'));
-    }
+    // Ajouter un bouton de fermeture
+    var closeBtn = document.createElement('button');
+    closeBtn.innerHTML = '×';
+    closeBtn.style.cssText = `
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        background: #0459ab;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        z-index: 10000;
+        cursor: pointer;
+    `;
+    closeBtn.onclick = function() {
+        document.body.removeChild(translateOverlay);
+        document.body.removeChild(closeBtn);
+        document.getElementById('currentLang').innerText = 'FR';
+        document.getElementById('langIcon').className = 'fa fa-globe me-1';
+    };
+    
+    document.body.appendChild(closeBtn);
+    
+    // Mettre à jour le bouton
+    document.getElementById('currentLang').innerText = 'EN';
+    document.getElementById('langIcon').className = 'fa fa-language me-1';
 }
 </script>
 
 <style>
-.goog-te-banner-frame { display: none !important; }
-body { top: 0px !important; }
-.goog-te-gadget { display: none !important; }
+/* Style professionnel pour le bouton */
+.language-btn {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.language-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #0459ab;
+    color: #0459ab;
+    text-decoration: none;
+}
 </style>
 </head>
 
@@ -135,10 +159,13 @@ body { top: 0px !important; }
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
 
                     </div>
-      <div class="nav-link d-flex align-items-center" style="cursor: pointer;" onclick="toggleTranslation()">
+                        <div class="nav-link language-btn" onclick="activateProfessionalTranslation()">
         <i class="fa fa-globe me-1" id="langIcon"></i>
         <span id="currentLang">FR</span>
     </div>
+
+     
+                    
                 </div>
             </nav>
         </div>
@@ -277,32 +304,6 @@ body { top: 0px !important; }
 
 
 
-
-/* Cache les éléments Google Translate */
-.goog-te-banner-frame { display: none !important; }
-body { top: 0px !important; }
-.goog-te-gadget { display: none !important; }
-#google_translate_element { display: none !important; }
-
-/* Style du bouton langue */
-#languageButton {
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
-    padding: 6px 12px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-#languageButton:hover {
-    background-color: #f8f9fa;
-    border-color: #0459ab;
-    color: #0459ab;
-}
-
-#currentLang {
-    font-weight: 600;
-    font-size: 0.9rem;
-}
 
 
 
