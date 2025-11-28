@@ -31,75 +31,73 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Dans la section <head> de votre site -->
+<div id="google_translate_element" style="display:none;"></div>
+
 <script>
-let translationActive = false;
-
-function toggleLanguage() {
-    if (!translationActive) {
-        // Premier clic - activer Google Translate
-        activateRealTranslation();
-    } else {
-        // Changer la langue
-        switchLanguage();
-    }
-}
-
-function activateRealTranslation() {
-    // Créer l'élément Google Translate
-    var translateDiv = document.getElementById('google_translate_element');
-    if (!translateDiv) {
-        translateDiv = document.createElement('div');
-        translateDiv.id = 'google_translate_element';
-        document.body.appendChild(translateDiv);
-    }
-    
-    // Charger Google Translate
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    document.head.appendChild(script);
-    
-    translationActive = true;
-    document.getElementById('currentLang').innerText = 'EN';
-    document.getElementById('langIcon').className = 'fa fa-language me-1';
-}
-
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'fr',
-        includedLanguages: 'fr,en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        includedLanguages: 'en,fr',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
     }, 'google_translate_element');
+}
+
+function toggleTranslation() {
+    // Charger Google Translate si pas déjà fait
+    if (!window.googleTranslateLoaded) {
+        var script = document.createElement('script');
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        document.head.appendChild(script);
+        window.googleTranslateLoaded = true;
+        
+        // Attendre que Google Translate charge puis basculer en anglais
+        setTimeout(function() {
+            forceEnglishTranslation();
+        }, 2000);
+    } else {
+        // Si déjà chargé, basculer entre FR et EN
+        switchLanguage();
+    }
     
-    // Forcer la traduction en anglais
-    setTimeout(function() {
-        var select = document.querySelector('.goog-te-combo');
-        if (select) {
-            select.value = 'en';
-            select.dispatchEvent(new Event('change'));
-        }
-    }, 1000);
+    // Changer l'apparence du bouton immédiatement
+    var currentLang = document.getElementById('currentLang');
+    var langIcon = document.getElementById('langIcon');
+    
+    if (currentLang.innerText === 'FR') {
+        currentLang.innerText = 'EN';
+        langIcon.className = 'fa fa-language me-1';
+    } else {
+        currentLang.innerText = 'FR';
+        langIcon.className = 'fa fa-globe me-1';
+    }
+}
+
+function forceEnglishTranslation() {
+    var select = document.querySelector('.goog-te-combo');
+    if (select && select.value !== 'en') {
+        select.value = 'en';
+        select.dispatchEvent(new Event('change'));
+    }
 }
 
 function switchLanguage() {
     var select = document.querySelector('.goog-te-combo');
     if (select) {
-        var currentLang = document.getElementById('currentLang').innerText;
-        
-        if (currentLang === 'FR') {
+        if (select.value === 'fr') {
             select.value = 'en';
-            document.getElementById('currentLang').innerText = 'EN';
-            document.getElementById('langIcon').className = 'fa fa-language me-1';
         } else {
             select.value = 'fr';
-            document.getElementById('currentLang').innerText = 'FR';
-            document.getElementById('langIcon').className = 'fa fa-globe me-1';
         }
-        
         select.dispatchEvent(new Event('change'));
     }
 }
 </script>
+
+<style>
+.goog-te-banner-frame { display: none !important; }
+body { top: 0px !important; }
+.goog-te-gadget { display: none !important; }
+</style>
 </head>
 
 <body>
@@ -137,7 +135,7 @@ function switchLanguage() {
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
 
                     </div>
-          <div class="nav-link d-flex align-items-center" id="languageButton" onclick="toggleLanguage()">
+      <div class="nav-link d-flex align-items-center" style="cursor: pointer;" onclick="toggleTranslation()">
         <i class="fa fa-globe me-1" id="langIcon"></i>
         <span id="currentLang">FR</span>
     </div>
